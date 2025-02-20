@@ -1,0 +1,311 @@
+body {
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ----- section-title ----- */
+
+.section-title {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+
+  background-color: #111114;
+  color: #fff;
+  font-family: "Alata", serif;
+  font-weight: 400;
+  font-size: 3.3rem;
+  margin-bottom: 10px;
+}
+
+.section-title-br {
+  background-color: #fff;
+  color: #111114;
+}
+
+.section-title-jp {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.merit-title-set {
+  margin-bottom: 40px;
+}
+
+
+
+/* ----- achivement----- */
+#achievement {
+  overflow: hidden;
+  padding: 0 5px;
+  margin-bottom: 50px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+    
+}
+
+.ac-right {
+    position: relative;
+    margin-left:  10px;
+    width: 60%;
+}
+
+.ac-right::after {
+    background-color: blue;
+    content: '';
+    height: 130%;
+    width: 2000px;
+    position: absolute;
+    top: -30px;
+    left: -35%;
+    z-index: -100;
+    
+}
+
+.ac-textbox {
+    padding: 0 60px;
+}
+
+.ac-title {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 24px 0;
+}
+
+.ac-text {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.sp_br {
+  display: none;
+}
+
+
+/* ----- スライダー ----- */
+
+/* スライダー 画像 */
+.slider {
+  width: 277px;
+  height: auto;
+  top: 30px;
+}
+
+
+/* スライダー (カーソル・ドット) */
+.slider-carsol {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+/* スライダー ドット */
+.slick-dots {
+  bottom: 0 !important;
+  align-items: center;
+}
+
+.slick-dots li {
+}
+
+
+/* スライダー矢印 */
+.slick-prev::before,
+.slick-next::before {
+  content: none !important;
+  display: none !important;
+}
+
+.slick-arrow {
+  position: relative;
+  top: 25px;
+  cursor: pointer;
+}
+
+.sl-title {
+  left: 300px;
+  position: absolute;
+}
+
+
+
+  @media screen and (max-width:768px){
+    #achievement {
+      position: relative;
+      padding: 0;
+    }
+
+  .inner {
+    flex-direction: column;
+    padding: 0 15px;
+    position: static;
+  }
+
+  .section-title {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    }
+
+.ac-right {
+    width: 100%;
+    position: static;
+}
+
+.ac-right::after {
+    width: 100%;
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.ac-textbox {
+    padding: 0 5px;
+}
+
+.sp_br {
+  display: block;
+}
+
+.ac-title {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 24px 0;
+}
+
+.ac-text {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.sp_br {
+  display: none;
+}
+  }
+
+
+
+
+/* ------- merit ------- */
+#merit {
+  padding: 100px 20px;
+  background-image: url(./img/merit-bg.png);
+  text-align: center;
+}
+
+.merit-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.merit-item-mainimg{
+  width: 53%;
+}
+.merit-item:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+/* MERIT itemテキスト部分 */
+
+.merit-item-textbox {
+  width: 50%;
+}
+
+.merit-item-title {
+  display: flex;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cfcfcf ;
+  align-items: center;
+}
+
+.merit-item-text {
+  margin-top: 15px;
+}
+
+/* 
+
+この画像の大きさが、.merit-num に指定しても効かないのに、下の指定方法なら効くのはなんで...
+
+ */
+.merit-item-title img {
+  width: auto;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.merit-num {
+
+}
+
+.merit-item-title p {
+  font-size: 3rem;
+  font-family: "Alata", serif;
+  font-weight: normal;
+  margin-right: 20px;
+}
+
+.merit-item-title {
+  font-size:1.4rem;
+  font-weight: bold;
+  align-items: center;
+}
+
+.merit-item-text{
+  padding: 0 30px;
+  text-align: left;
+}
+
+  @media screen and (max-width:768px){
+
+    #merit {
+      padding: 100px 15px;
+    }
+
+    .merit-item {
+      flex-direction: column;
+    }
+
+    .merit-item:nth-child(2n) {
+    flex-direction: column;
+    }
+
+    .merit-item-mainimg{
+      width: 100%;
+    }
+    .merit-item-textbox {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .merit-item-title {
+      padding-bottom: 5px;
+      padding-left: 0px;
+      font-size: 1.6rem;
+    }
+
+    .merit-item-text {
+      padding: 0;
+    }
+
+    .merit-item-text{
+      font-size: 1.1rem;
+    }
+
+
+  }
