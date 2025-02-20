@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <!-- reset.css modern-css-reset -->
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
@@ -74,10 +74,10 @@
                     </div>
                     <ul class="merit-list">
                         <li class="merit-item">
-                            <img class="merit-item-mainimg" src="./img/merit-img-01.png" alt="男性がスマートフォンを見る画像">
+                            <img class="merit-item-mainimg" src="<?php echo get_template_directory_uri(); ?>/img/merit-img-01.png" alt="男性がスマートフォンを見る画像">
                             <div class="merit-item-textbox">
                                 <div class="merit-item-title">
-                                    <img class="merit-num" src="./img/merit.png" alt="Merit">
+                                    <img class="merit-num" src="<?php echo get_template_directory_uri(); ?>/img/merit.png" alt="Merit">
                                     <p>01</p>
                                     <h4 class="merit-title-text">自社商品やサービス認知拡大</h4>
                                 </div>
@@ -86,10 +86,10 @@
                             </div>
                         </li>
                         <li class="merit-item">
-                            <img class="merit-item-mainimg" src="./img/merit-img-02.png" alt="男性がスマートフォンを見る画像">
+                            <img class="merit-item-mainimg" src="<?php echo get_template_directory_uri(); ?>/img/merit-img-02.png" alt="男性がスマートフォンを見る画像">
                             <div class="merit-item-textbox">
                                 <div class="merit-item-title">
-                                    <img class="merit-num" src="./img/merit.png" alt="Merit">
+                                    <img class="merit-num" src="<?php echo get_template_directory_uri(); ?>/img/merit.png" alt="Merit">
                                     <p>02</p>
                                     <h4 class="merit-title-text">自社商品やサービス認知拡大</h4>
                                 </div>
@@ -98,10 +98,10 @@
                             </div>
                         </li>
                         <li class="merit-item">
-                            <img class="merit-item-mainimg" src="./img/merit-img-03.png" alt="男性がスマートフォンを見る画像">
+                            <img class="merit-item-mainimg" src="<?php echo get_template_directory_uri(); ?>/img/merit-img-03.png" alt="男性がスマートフォンを見る画像">
                             <div class="merit-item-textbox">
                                 <div class="merit-item-title">
-                                    <img class="merit-num" src="./img/merit.png" alt="Merit">
+                                    <img class="merit-num" src="<?php echo get_template_directory_uri(); ?>/img/merit.png" alt="Merit">
                                     <p>03</p>
                                     <h4 class="merit-title-text">自社商品やサービス認知拡大</h4>
                                 </div>
@@ -132,10 +132,8 @@
                 dots: true,
                 infinite: true,
                 adaptiveHeight: true,
-                // prevArrow: '<button class="prev_icon"><img src="./img/prev.png" alt="前へ"></button>',
-                // nextArrow: '<button class="next_icon"><img src="./img/next.png" alt="次へ"></button>',
-                prevArrow: '<img src="./img/prev.png" alt="" class="prev_icon">',
-                nextArrow: '<img src="./img/next.png" alt="" class="next_icon">',
+                prevArrow: '<img src="<?php echo get_template_directory_uri(); ?>/img/prev.png" alt="" class="prev_icon">',
+                nextArrow: '<img src="<?php echo get_template_directory_uri(); ?>/img/next.png" alt="" class="next_icon">',
                 appendDots: $('.slick-dots'),  // ドットを移動させる
                 appendArrows: $('.slider-carsol'), // 両方の矢印をまとめて移動するコンテナ
           });
