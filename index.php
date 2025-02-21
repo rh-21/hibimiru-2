@@ -12,12 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <!-- reset.css modern-css-reset -->
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-    <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 </head>
 
 
@@ -83,16 +81,12 @@
                             );
                             // データの取得
                             $posts = get_posts($args);
-
-                            for ($i = 1; $i <= 10; $i += 1) {
-                                $meritCount
-                            };
                             ?>
-                        <?php foreach ($posts as $post) : ?>
+                        <?php foreach ($posts as $index => $post) : ?>
                         <?php setup_postdata($post); ?>
 
                         <li class="merit-item">
-                            <?php the_post_thumbnail();?>
+                            <?php the_post_thumbnail( 'full', array( 'class' => 'merit-item-mainimg' ) ); ?>
 <!-- 
 ここのサムネイルの画像のcss指定方法がわからなかった。なぜdivで囲ってあげて反応しないのか。下の場合hightをautoにすると縦伸びする。
                              -->
@@ -105,7 +99,7 @@
                             <div class="merit-item-textbox">
                                 <div class="merit-item-title">
                                     <img class="merit-num" src="<?php echo get_template_directory_uri(); ?>/img/merit.png" alt="Merit">
-                                    <p></p>
+                                    <p><?php echo str_pad($index +1, 2, 0, STR_PAD_LEFT); ?></p>
                                     <h4 class="merit-title-text"><?php the_title(); ?></h4>
                                 </div>
                                 <p class="merit-item-text">ショート動画は気軽に視聴できるため、再生回数が多ければSNS上での拡散が容易なため多くのターゲットへの認知拡大が見込め自社商品やサービスの認知拡大が見込めます。</p>

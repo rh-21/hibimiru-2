@@ -73,7 +73,7 @@ ul {
 }
 
 .ac-right::after {
-    background-color: blue;
+    background-color: #111114 ;
     content: '';
     height: 130%;
     width: 2000px;
@@ -81,7 +81,6 @@ ul {
     top: -30px;
     left: -35%;
     z-index: -100;
-    
 }
 
 .ac-textbox {
@@ -125,19 +124,24 @@ ul {
 
 /* スライダー ドット */
 .slick-dots {
-  bottom: 0 !important;
+  bottom: 0 ;
   align-items: center;
 }
 
-.slick-dots li {
+.slick-dots li button:before {
+  color: white;
+}
+
+.slick-dots li.slick-active button:before {
+   color: white;
 }
 
 
 /* スライダー矢印 */
 .slick-prev::before,
 .slick-next::before {
-  content: none !important;
-  display: none !important;
+  content: none ;
+  display: none ;
 }
 
 .slick-arrow {
@@ -223,12 +227,7 @@ ul {
   align-items: center;
 }
 
-/* .merit-item-mainimg {
-  width: 53%;
-  height: auto;
-} */
-
- .merit-item img{
+.merit-item-mainimg {
   width: 53%;
   height: auto;
 }
@@ -261,13 +260,14 @@ ul {
 
  */
 .merit-item-title img {
-  width: auto;
-  height: 40px;
-  margin-right: 5px;
+  
 }
 
 .merit-num {
-
+  width: auto;
+  height: 40px;
+  margin-right: 5px;
+  display: block;
 }
 
 .merit-item-title p {
