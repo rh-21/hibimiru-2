@@ -223,9 +223,16 @@ ul {
   align-items: center;
 }
 
-.merit-item-mainimg{
+/* .merit-item-mainimg {
   width: 53%;
+  height: auto;
+} */
+
+ .merit-item img{
+  width: 53%;
+  height: auto;
 }
+
 .merit-item:nth-child(2n) {
     flex-direction: row-reverse;
 }
@@ -295,9 +302,15 @@ ul {
     flex-direction: column;
     }
 
-    .merit-item-mainimg{
+    .merit-item img{
       width: 100%;
     }
+
+    .merit-item-title img {
+      width: auto;
+      height: 46px;
+    }
+
     .merit-item-textbox {
       width: 100%;
       margin-top: 10px;

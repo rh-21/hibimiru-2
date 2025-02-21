@@ -73,18 +73,49 @@
                         <span class="section-title-jp">メリット</span>
                     </div>
                     <ul class="merit-list">
+                        <?php
+                            //取得したい投稿記事などの条件を引数として渡す
+                            $args = array(
+                            // 投稿タイプ
+                            'post_type'      => 'merit',
+                            // 1ページに表示する投稿数
+                            'posts_per_page' => 5,
+                            );
+                            // データの取得
+                            $posts = get_posts($args);
+
+                            for ($i = 1; $i <= 10; $i += 1) {
+                                $meritCount
+                            };
+                            ?>
+                        <?php foreach ($posts as $post) : ?>
+                        <?php setup_postdata($post); ?>
+
                         <li class="merit-item">
-                            <img class="merit-item-mainimg" src="<?php echo get_template_directory_uri(); ?>/img/merit-img-01.png" alt="男性がスマートフォンを見る画像">
+                            <?php the_post_thumbnail();?>
+<!-- 
+ここのサムネイルの画像のcss指定方法がわからなかった。なぜdivで囲ってあげて反応しないのか。下の場合hightをautoにすると縦伸びする。
+                             -->
+                            <!-- <div class="merit-item-mainimg">
+                                <?php the_post_thumbnail();?>
+                            </div> -->
+                            <!-- <img class="merit-item-mainimg" src="" > -->
+
+
                             <div class="merit-item-textbox">
                                 <div class="merit-item-title">
                                     <img class="merit-num" src="<?php echo get_template_directory_uri(); ?>/img/merit.png" alt="Merit">
-                                    <p>01</p>
-                                    <h4 class="merit-title-text">自社商品やサービス認知拡大</h4>
+                                    <p></p>
+                                    <h4 class="merit-title-text"><?php the_title(); ?></h4>
                                 </div>
-                                <p class="merit-item-text">
-                                    ショート動画は気軽に視聴できるため、再生回数が多ければSNS上での拡散が容易なため多くのターゲットへの認知拡大が見込め自社商品やサービスの認知拡大が見込めます。</p>
+                                <p class="merit-item-text">ショート動画は気軽に視聴できるため、再生回数が多ければSNS上での拡散が容易なため多くのターゲットへの認知拡大が見込め自社商品やサービスの認知拡大が見込めます。</p>
                             </div>
                         </li>
+                         <?php endforeach; ?>
+                        <!-- 使用した投稿データをリセット -->
+                        <?php wp_reset_postdata(); ?>
+
+<!--                         
                         <li class="merit-item">
                             <img class="merit-item-mainimg" src="<?php echo get_template_directory_uri(); ?>/img/merit-img-02.png" alt="男性がスマートフォンを見る画像">
                             <div class="merit-item-textbox">
@@ -108,7 +139,7 @@
                                 <p class="merit-item-text">
                                     ショート動画は気軽に視聴できるため、再生回数が多ければSNS上での拡散が容易なため多くのターゲットへの認知拡大が見込め自社商品やサービスの認知拡大が見込めます。</p>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
             </section>
         </main>
